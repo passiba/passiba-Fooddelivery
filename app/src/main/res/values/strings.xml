@@ -3,5 +3,13 @@
 
     <string name="app_name">Fooddelivery</string>
     <string name="title_activity_fooddelivery_maps">Map</string>
+    <string name="title_fooddeliveryplaceactivity_list">Items</string>
+    <string name="title_fooddeliveryplaceactivity_detail">FoodDeliveryplaceActivity Detail</string>
+    <string name="title_activity_fullscreen_location">FullscreenLocationActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity">FooddeliveryActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

@@ -3,6 +3,7 @@ package org.passiba.fooddelivery;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -16,11 +17,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class FooddeliveryMapsActivity extends FragmentActivity {
+import static org.passiba.fooddelivery.DummyLocationContent.ITEMS;
+
+public class FooddeliveryMapsActivity extends FragmentActivity implements GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
-    static final LatLng HAMBURG = new LatLng(53.558, 9.927);
-    static final LatLng KIEL = new LatLng(53.551, 9.993);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,24 +47,61 @@ public class FooddeliveryMapsActivity extends FragmentActivity {
   */
         private void setUpMap() {
 
+
+
+
        /* mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
                 .getMap();*/
-            mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
-                    .getMap();
-            Marker hamburg =  mMap.addMarker(new MarkerOptions().position(HAMBURG)
-                    .title("Hamburg"));
-            Marker kiel =  mMap.addMarker(new MarkerOptions()
-                    .position(KIEL)
-                    .title("Kiel")
-                    .snippet("Kiel is cool")
-                    .icon(BitmapDescriptorFactory
-                            .fromResource(R.drawable.ic_launcher)));
+            if (mMap == null) {
+                mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+                        .getMap();
+                mMap.setPadding(0,0,300,0);//enables navigation of setting padding
 
-            // Move the camera instantly to hamburg with a zoom of 15.
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(HAMBURG, 15));
 
-            // Zoom in, animating the camera.
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+            }
+            if (mMap != null) {
+
+                    int count = 0;
+
+                    for (DummyLocationContent.DummyLocation location : ITEMS) {
+                       Marker marker;
+                        count++;
+                       marker = mMap.addMarker(new MarkerOptions()
+                                        .position(location.getLatitudelongitude())
+                                        .title(location.getName())
+                                        .snippet(location.getWebsite())
+                                        .icon(BitmapDescriptorFactory
+                                                .fromResource(R.drawable.ic_launcher))
+
+
+                        );
+
+
+                        if (count == ITEMS.size()) {
+                            // Move the camera instantantly to the last item geolocation cordinates in the array
+                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location.getLatitudelongitude(), 15));
+                        }
+
+                    }
+
+
+                    // Zoom in, animating the camera.
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+                    mMap.getUiSettings().setZoomControlsEnabled(true);
+                    mMap.getUiSettings().setMapToolbarEnabled(true);
+                    mMap.getUiSettings().setZoomGesturesEnabled(true);
+                    mMap.getUiSettings().setMyLocationButtonEnabled(true);
+            }
         }
 
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+
+        return false;
+
+    }
 }
+
+
