@@ -1,5 +1,6 @@
 package org.passiba.fooddelivery;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import com.google.android.gms.maps.GoogleMap;
@@ -97,7 +98,7 @@ public class FooddeliveryMapsActivity extends FragmentActivity implements Google
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-
+        startActivity(new Intent(this,FoodDeliveryDetailFragment.class));
 
         return false;
 

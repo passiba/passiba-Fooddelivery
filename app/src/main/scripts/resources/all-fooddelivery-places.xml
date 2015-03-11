@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API">
+    <note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+    <meta osm_base="2014-05-18T17:07:02Z"/>
+
+<node id="248164289" lat="60.157874" lon="24.739865">
+            <tag k="addr:city" v="Espoo"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Lähetyskappeli Ruoka-apu ry"/>
+            <tag k="website" v="http://www.kaivoespoo.com/avoinna.html"/>
+ </node>
+ <node id="248164290" lat="60.203123" lon="24.654608">
+            <tag k="addr:city" v="Espoo"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Hyvä Arki ry"/>
+            <tag k="website" v="http://www.hyva-arki.fi/"/>
+</node>
+ <node id="248164291" lat="60.202722" lon="24.653334">
+            <tag k="addr:city" v="Espoo"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Manna-Apu Ry"/>
+            <tag k="website" v="http://www.manna-apu.com/"/>
+</node>
+<node id="248164291" lat="64.13677" lon="25.371158">
+            <tag k="addr:city" v="Haapavesi"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Haapaveden vapaaseurakunta"/>
+            <tag k="website" v="http://www.haapavesi.svk.fi"/>
+</node>
+<node id="248164291" lat="61.202622" lon="26.036645">
+            <tag k="addr:city" v="Heinola"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="JYRÄNKÖLÄN SETLEMENTTI RY"/>
+            <tag k="website" v="http://www.jyrankola.fi/"/>
+</node>
+<node id="248164291" lat="60.185342" lon="24.949493">
+            <tag k="addr:city" v="Helsinki"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Helsingin pelastusarmeija"/>
+            <tag k="website" v="http://pelastusarmeija.fi/avis/"/>
+
+</node>
+<node id="248164292" lat="60.187084" lon="24.953502">
+            <tag k="addr:city" v="Helsinki"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Veikko ja Lahja Hurstin Laupeudentyö ry"/>
+            <tag k="website" v="http://www.hurstinapu.net"/>
+</node>
+<node id="248164293" lat="60.187084" lon="24.953502">
+            <tag k="addr:city" v="Helsinki"/>
+            <tag k="amenity" v="ruokajakelu"/>
+            <tag k="amenity" v="voluntary_food_delivery"/>
+            <tag k="name" v="Veikko ja Lahja Hurstin Laupeudentyö ry"/>
+            <tag k="website" v="http://www.hurstinapu.net"/>
+</node>
+</osm>
